@@ -107,7 +107,7 @@ public class NumberResourceAspect {
 					exitLog(joinPoint, object);
 				}
 			} else {
-				throw new NumberException(HttpStatus.NO_CONTENT, environment.getProperty("number.not.added"));
+				throw new NumberException(HttpStatus.NOT_FOUND, environment.getProperty("number.not.added"));
 			}
 
 		} catch (Exception e) {
